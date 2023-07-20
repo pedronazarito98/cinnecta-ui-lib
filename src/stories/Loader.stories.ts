@@ -1,4 +1,3 @@
-// @ts-expect-error TS(6142): Module '../components/Loader/Loader' was resolved ... Remove this comment to see the full error message
 import { Loader } from "../components/Loader/Loader";
 
 export default {

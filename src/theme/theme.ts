@@ -275,7 +275,7 @@ export const input = {
 
   radio: {
     size: 18,
-    // @ts-expect-error TS(2339): Property 'white' does not exist on type '{ backgro... Remove this comment to see the full error message
+
     background: inputTokens?.white,
     borderRadius: inputTokens?.radioBorderRadius,
 
@@ -311,7 +311,7 @@ export const input = {
 
   checkbox: {
     size: 18,
-    // @ts-expect-error TS(2339): Property 'white' does not exist on type '{ backgro... Remove this comment to see the full error message
+
     background: inputTokens?.white,
     borderRadius: inputTokens?.checkboxBorderRadius,
 
@@ -397,10 +397,6 @@ export const {
   theme,
   createTheme,
   config,
-  // @ts-expect-error TS(2339): Property 'media' does not exist on type 'Stitches<... Remove this comment to see the full error message
-  media,
-  // @ts-expect-error TS(2339): Property 'utils' does not exist on type 'Stitches<... Remove this comment to see the full error message
-  utils,
 } = createStitches({
   themeMap: {
     ...defaultThemeMap,

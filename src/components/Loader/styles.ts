@@ -21,8 +21,8 @@ export const LoaderBall = styled("div", {
   backgroundColor: "$white",
   borderRadius: "100%",
   display: "inline-block",
-  // @ts-expect-error TS(2322): Type '{ (): string; name: string; }' is not assign... Remove this comment to see the full error message
-  animationName: bounceKeyframes,
+
+  animationName: bounceKeyframes(),
   animationDuration: "1.4s",
   animationIterationCount: "infinite",
   animationEasing: "ease-in-out",

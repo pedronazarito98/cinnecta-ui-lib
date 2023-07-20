@@ -74,7 +74,7 @@ const input = {
   invalidBackground: color.alertLight,
   focusBackground: color.white,
   spacing: 0.5 * unit,
-
+  white: "$white",
   border: {
     borderWidth: 1,
     borderStyle: "solid",
@@ -287,7 +287,7 @@ const theme = {
 
     radio: {
       size: 18,
-      // @ts-expect-error TS(2339): Property 'white' does not exist on type '{ backgro... Remove this comment to see the full error message
+
       background: input.white,
       borderRadius: input.radioBorderRadius,
 
@@ -323,7 +323,7 @@ const theme = {
 
     checkbox: {
       size: 18,
-      // @ts-expect-error TS(2339): Property 'white' does not exist on type '{ backgro... Remove this comment to see the full error message
+
       background: input.white,
       borderRadius: input.checkboxBorderRadius,
 

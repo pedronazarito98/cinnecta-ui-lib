@@ -6,7 +6,7 @@ export const inputTokens = {
   invalidBackground: "$alertLight",
   focusBackground: "$white",
   spacing: 0.5 * 15,
-
+  white: "$white",
   border: {
     borderWidth: 1,
     borderStyle: "solid",
