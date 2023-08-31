@@ -63,7 +63,7 @@ export const Button: FC<ButtonProps> = ({
   simple,
   soft,
   chip,
-  primary,
+  primary = false,
   rectangular,
   removeSideSpacing,
   secondary,
@@ -83,7 +83,7 @@ export const Button: FC<ButtonProps> = ({
 
         // @ts-expect-error
         <ButtonContainer
-          btnIcon={!!icon}
+          btnIcon={icon}
           chip={chip}
           medium={!small && !large}
           fullWidth={fullWidth}
@@ -145,8 +145,4 @@ export const Button: FC<ButtonProps> = ({
           )}
         </ButtonContainer>
   );
-};
-
-Button.defaultProps = {
-  primary: false,
 };
