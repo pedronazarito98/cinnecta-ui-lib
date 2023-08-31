@@ -1,27 +1,26 @@
+import React from "react";
 import { ContainerWrapper } from "./styles";
-import PropTypes from "prop-types";
+export interface WrapperProps {
+  container?: boolean;
+  id?: string;
+  fullHeight?: boolean;
+  gray?: boolean;
+  smallContainer?: boolean;
+  microContainer?: boolean;
+  largeContainer?: boolean;
+  largeVerticalSpacing?: boolean;
+  smallVerticalSpacing?: boolean;
+  verticalSpacing?: boolean;
+  largeSpacing?: boolean;
+  smallSpacing?: boolean;
+  noSpacing?: boolean;
+  backgroundColor?: string;
+  relative?: boolean;
+  children: React.ReactNode;
+  microSpacing?: boolean;
+}
 
-const propTypes = {
-  container: PropTypes.bool,
-  id: PropTypes.string,
-  fullHeight: PropTypes.bool,
-  gray: PropTypes.bool,
-  smallContainer: PropTypes.bool,
-  microContainer: PropTypes.bool,
-  largeContainer: PropTypes.bool,
-  largeVerticalSpacing: PropTypes.bool,
-  smallVerticalSpacing: PropTypes.bool,
-  verticalSpacing: PropTypes.bool,
-  largeSpacing: PropTypes.bool,
-  smallSpacing: PropTypes.bool,
-  noSpacing: PropTypes.bool,
-  backgroundColor: PropTypes.string,
-  relative: PropTypes.bool,
-  children: PropTypes.any,
-  microSpacing: PropTypes.bool,
-};
-
-export const Wrapper = ({
+export const Wrapper: React.FC<WrapperProps> = ({
   container,
   fullHeight,
   id,
@@ -60,4 +59,3 @@ export const Wrapper = ({
     {children}
   </ContainerWrapper>
 );
-Wrapper.propTypes = propTypes;

@@ -9,7 +9,7 @@ export interface AvatarProps {
   micro?: boolean;
   size?: number;
   small?: boolean;
-  source: string;
+  source?: React.ReactNode;
   square?: boolean;
 }
 

@@ -1,4 +1,4 @@
-import { container, styled, units } from "../../styles/theme";
+import { container, styled, units } from "../../theme/theme";
 
 export const ContainerWrapper = styled("div", {
   boxSizing: "border-box",

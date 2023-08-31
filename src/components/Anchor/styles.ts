@@ -1,5 +1,4 @@
-import { styled } from "../../styles/theme";
-import Link from "next/link";
+import { styled } from "../../theme/theme";
 
 export const AnchorStyles = styled("a", {
   color: "$secondary",
@@ -12,6 +11,11 @@ export const AnchorStyles = styled("a", {
         "&:hover": {
           textDecoration: "underline",
         },
+      },
+    },
+    disabled: {
+      true: {
+        opacity: 0.5,
       },
     },
   },
