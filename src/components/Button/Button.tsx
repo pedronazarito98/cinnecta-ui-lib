@@ -77,13 +77,13 @@ export const Button: FC<ButtonProps> = ({
   icon,
   ...props
 }) => {
+  const showShimmer = !icon && loading && shimmer
+  const showButtonLoader = !icon && loading
   return (
-    // @ts-expect-error
-    <>
-      {icon ? (
+
         // @ts-expect-error
         <ButtonContainer
-          btnIcon
+          btnIcon={!!icon}
           chip={chip}
           medium={!small && !large}
           fullWidth={fullWidth}
@@ -114,54 +114,22 @@ export const Button: FC<ButtonProps> = ({
           noBorder={noBorder}
           {...props}
         >
-          {children}
-          {icon}
-        </ButtonContainer>
-      ) : (
-        // @ts-expect-error
-        <ButtonContainer
-          chip={chip}
-          medium={!small && !large}
-          fullWidth={fullWidth}
-          block={block}
-          compact={compact}
-          dashed={dashed}
-          disabled={disabled}
-          inverse={inverse}
-          grouped={grouped}
-          groupedFirst={groupedFirst}
-          groupedLast={groupedLast}
-          large={large}
-          mono={mono}
-          noSpacing={noSpacing}
-          soft={soft}
-          primary={primary}
-          rectangular={rectangular}
-          removeSideSpacing={removeSideSpacing}
-          secondary={secondary}
-          shade={shade}
-          short={short}
-          simple={simple}
-          small={small}
-          tall={tall}
-          onClick={onClick}
-          transparent={transparent}
-          underlined={underlined}
-          noBorder={noBorder}
-          {...props}
-        >
-          {loading && shimmer && (
+          {showShimmer && (
             // @ts-expect-error
             <WrapperShimmer>
               {/** @ts-expect-error */}
               <Shimmer height="100%" width="100%" />
             </WrapperShimmer>
           )}
-          {/** @ts-expect-error */}
+          {icon && children ? (children) : (
+          /** @ts-expect-error */
           <Content contentLoading={loading} contentFullWidth={fullWidth}>
             {children}
-          </Content>
-          {loading && (
+          </Content>)
+          }
+
+          {icon && icon}
+          {showButtonLoader && (
             // @ts-expect-error
             <ButtonLoader>
               {!shimmer && (
@@ -176,8 +144,6 @@ export const Button: FC<ButtonProps> = ({
             </ButtonLoader>
           )}
         </ButtonContainer>
-      )}
-    </>
   );
 };
 
