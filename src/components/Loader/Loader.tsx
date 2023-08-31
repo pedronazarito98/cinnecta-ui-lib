@@ -17,16 +17,18 @@ export const Loader: React.FC<LoaderProps> = ({
 }) => (
   // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
   <LoaderStyles>
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <LoaderBall
+{    
+  // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
+}    <LoaderBall
       mono={mono}
       large={large}
       small={small}
       primary={primary}
       secondary={secondary}
     />
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <LoaderBall
+{    
+  // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
+}    <LoaderBall
       second
       mono={mono}
       small={small}
@@ -34,8 +36,9 @@ export const Loader: React.FC<LoaderProps> = ({
       primary={primary}
       secondary={secondary}
     />
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <LoaderBall
+{    
+  // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
+}    <LoaderBall
       third
       mono={mono}
       small={small}
