@@ -20,13 +20,16 @@ export default defineConfig({
 
   build: {
     lib: {
-      entry: resolve("src", "components/index.ts"),
+      entry: "./src/components/index.ts",
       name: "cinnectaUiLib",
       formats: ["es", "umd"],
       fileName: (format) => `react-vite-library.${format}.js`,
     },
     rollupOptions: {
-      external: [...Object.keys(packageJson.peerDependencies)],
+      external: [
+        ...Object.keys(packageJson.peerDependencies),
+        "react/jsx-runtime",
+      ],
       output: {
         globals: {
           react: "React",

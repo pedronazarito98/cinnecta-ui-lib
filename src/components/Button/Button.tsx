@@ -5,9 +5,9 @@ import {
   Content,
   WrapperShimmer,
 } from "./styles";
-// @ts-expect-error
+
 import { Shimmer } from "../Shimmer/Shimmer";
-// @ts-expect-error
+
 import { Loader } from "../Loader/Loader";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -78,10 +78,8 @@ export const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    // @ts-expect-error
     <>
       {icon ? (
-        // @ts-expect-error
         <ButtonContainer
           btnIcon
           chip={chip}
@@ -118,7 +116,6 @@ export const Button: FC<ButtonProps> = ({
           {icon}
         </ButtonContainer>
       ) : (
-        // @ts-expect-error
         <ButtonContainer
           chip={chip}
           medium={!small && !large}
@@ -151,21 +148,17 @@ export const Button: FC<ButtonProps> = ({
           {...props}
         >
           {loading && shimmer && (
-            // @ts-expect-error
             <WrapperShimmer>
-              {/** @ts-expect-error */}
               <Shimmer height="100%" width="100%" />
             </WrapperShimmer>
           )}
-          {/** @ts-expect-error */}
+
           <Content contentLoading={loading} contentFullWidth={fullWidth}>
             {children}
           </Content>
           {loading && (
-            // @ts-expect-error
             <ButtonLoader>
               {!shimmer && (
-                // @ts-expect-error
                 <Loader
                   small
                   mono={mono}

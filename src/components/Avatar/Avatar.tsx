@@ -1,19 +1,19 @@
-// @ts-expect-error TS(6142): Module '../Shimmer/Shimmer' was resolved to '/home... Remove this comment to see the full error message
+import * as React from "react";
 import { Shimmer } from "../Shimmer/Shimmer";
 import { AvatarStyle } from "./styles";
-import PropTypes from "prop-types";
 
-const propTypes = {
-  inline: PropTypes.bool,
-  large: PropTypes.bool,
-  loading: PropTypes.bool,
-  micro: PropTypes.bool,
-  small: PropTypes.bool,
-  source: PropTypes.string,
-  square: PropTypes.bool,
-  size: PropTypes.number,
-};
-export const Avatar = ({
+export interface AvatarProps {
+  inline?: boolean;
+  large?: boolean;
+  loading?: boolean;
+  micro?: boolean;
+  size?: number;
+  small?: boolean;
+  source?: React.ReactNode;
+  square?: boolean;
+}
+
+export const Avatar: React.FC<AvatarProps> = ({
   inline,
   large,
   loading,
@@ -22,9 +22,8 @@ export const Avatar = ({
   small,
   source,
   square,
-}: any) => {
+}) => {
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <AvatarStyle
       inline={inline}
       large={large}
@@ -38,9 +37,7 @@ export const Avatar = ({
         height: size,
       }}
     >
-      {/** @ts-expect-error */}
       {loading && <Shimmer width="100%" height="100%" />}
     </AvatarStyle>
   );
 };
-Avatar.propTypes = propTypes;

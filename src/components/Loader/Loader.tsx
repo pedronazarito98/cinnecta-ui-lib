@@ -1,4 +1,5 @@
 import { LoaderBall, LoaderStyles } from "./styles";
+import * as React from "react";
 
 export interface LoaderProps {
   small?: boolean;
@@ -15,9 +16,7 @@ export const Loader: React.FC<LoaderProps> = ({
   primary,
   mono,
 }) => (
-  // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
   <LoaderStyles>
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <LoaderBall
       mono={mono}
       large={large}
@@ -25,7 +24,7 @@ export const Loader: React.FC<LoaderProps> = ({
       primary={primary}
       secondary={secondary}
     />
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
+
     <LoaderBall
       second
       mono={mono}
@@ -34,7 +33,7 @@ export const Loader: React.FC<LoaderProps> = ({
       primary={primary}
       secondary={secondary}
     />
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
+
     <LoaderBall
       third
       mono={mono}

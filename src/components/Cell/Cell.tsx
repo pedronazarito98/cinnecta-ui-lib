@@ -1,4 +1,5 @@
 import { CellStyles } from "./styles";
+import * as React from "react";
 
 export interface CellProps {
   children?: React.ReactNode;
@@ -84,9 +85,7 @@ export const Cell: React.FC<CellProps> = ({
   order,
 }) => {
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <>
-      // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <CellStyles
         css={{
           size: size && size,
